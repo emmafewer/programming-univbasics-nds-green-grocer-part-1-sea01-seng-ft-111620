@@ -14,9 +14,10 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
+  new_cart = cart.uniq
   i = 0
-  while i < cart.length do
-    cart[i][:count] = cart.count(i)
+  while i < new_cart.length do
+    new_cart[i][:count] = cart.count(|i| include)
     i += 1 
   end
   binding.pry
