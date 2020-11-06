@@ -14,6 +14,9 @@ def find_item_by_name_in_collection(name, collection)
 end
 
 def consolidate_cart(cart)
+  
+  :count = Hash.new(0)
+names.each { |name| counts[name] += 1 }
   new_cart = []
   i = 0 
   while i < cart.length do 
