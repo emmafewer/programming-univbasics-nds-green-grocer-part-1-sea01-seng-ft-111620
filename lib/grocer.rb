@@ -15,7 +15,9 @@ end
 
 def consolidate_cart(cart)
   new_array = cart.uniq
-  
+  i = 0
+  while i < new_cart.length do
+    new_cart[i][:count] = cart.count(include? )
   
   binding.pry
 end
