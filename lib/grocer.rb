@@ -17,7 +17,7 @@ def consolidate_cart(cart)
   new_cart = cart.uniq
   i = 0
   while i < new_cart.length do
-    new_cart[i][:count] = 0 
+    if new_cart[i][:count] =+ 1
     #cart.count({|i| new_cart[i].included_in?(cart)})
     i += 1 
   end
