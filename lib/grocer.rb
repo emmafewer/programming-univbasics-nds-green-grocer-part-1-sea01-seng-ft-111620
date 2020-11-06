@@ -17,7 +17,7 @@ def consolidate_cart(cart)
   new_array = cart.uniq
   i = 0
   while i < new_cart.length do
-    new_cart[i][:count] = cart.count(include? new_cart[i][:item])
+    new_array[i][:count] = cart.count(include? new_array[i][:item])
     i += 1 
   end
   
