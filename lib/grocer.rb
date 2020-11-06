@@ -18,10 +18,12 @@ def consolidate_cart(cart)
   i = 0 
   while i < cart.length do 
     if new_cart include? i
-      new_cart << i 
       new_cart[i][:count] += 1 
     else 
-  
+      new_cart << i 
+      new_cart[i][:count] = 1 
+  end
+  new_cart
   binding.pry
 end
 
